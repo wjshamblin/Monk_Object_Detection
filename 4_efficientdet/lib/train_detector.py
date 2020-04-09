@@ -303,6 +303,7 @@ class Detector():
                                           opset_version=11)
                     except:
                         print('faild onnx export')
+                        continue
                     self.system_dict["local"]["model"].module.backbone_net.model.set_swish(memory_efficient=True)
                 else:
                     self.system_dict["local"]["model"].backbone_net.model.set_swish(memory_efficient=False)
