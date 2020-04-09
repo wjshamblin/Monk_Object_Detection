@@ -296,10 +296,13 @@ class Detector():
                 if isinstance(self.system_dict["local"]["model"], nn.DataParallel):
                     self.system_dict["local"]["model"].module.backbone_net.model.set_swish(memory_efficient=False)
 
-                    torch.onnx.export(self.system_dict["local"]["model"].module, dummy_input,
-                                      os.path.join(self.system_dict["output"]["saved_path"], "signatrix_efficientdet_coco.onnx"),
-                                      verbose=False,
-                                      opset_version=11)
+                    try:
+                        torch.onnx.export(self.system_dict["local"]["model"].module, dummy_input,
+                                          os.path.join(self.system_dict["output"]["saved_path"], "signatrix_efficientdet_coco.onnx"),
+                                          verbose=False,
+                                          opset_version=11)
+                    except:
+                        print('faild onnx export')
                     self.system_dict["local"]["model"].module.backbone_net.model.set_swish(memory_efficient=True)
                 else:
                     self.system_dict["local"]["model"].backbone_net.model.set_swish(memory_efficient=False)
