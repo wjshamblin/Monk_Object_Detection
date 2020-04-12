@@ -9,7 +9,7 @@ from src.model import EfficientDet
 from tensorboardX import SummaryWriter
 import shutil
 import numpy as np
-from tqdm.notebook import tqdm
+from tqdm.autonotebook import tqdm
 
 
 class Detector():
@@ -173,7 +173,10 @@ class Detector():
                         self.system_dict["local"]["optimizer"].step()
                         epoch_loss.append(float(loss))
                         total_loss = np.mean(epoch_loss)
-
+                        print( 
+                            'Epoch: {}/{}. Iteration: {}/{}. Cls loss: {:.5f}. Reg loss: {:.5f}. Batch loss: {:.5f} Total loss: {:.5f}'.format(
+                                epoch + 1, self.system_dict["params"]["num_epochs"], iter + 1, num_iter_per_epoch, cls_loss, reg_loss, loss,
+                                total_loss))
                         progress_bar.set_description(
                             'Epoch: {}/{}. Iteration: {}/{}. Cls loss: {:.5f}. Reg loss: {:.5f}. Batch loss: {:.5f} Total loss: {:.5f}'.format(
                                 epoch + 1, self.system_dict["params"]["num_epochs"], iter + 1, num_iter_per_epoch, cls_loss, reg_loss, loss,
