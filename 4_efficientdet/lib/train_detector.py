@@ -9,7 +9,7 @@ from src.model import EfficientDet
 from tensorboardX import SummaryWriter
 import shutil
 import numpy as np
-from tqdm.autonotebook import tqdm
+from tqdm.notebook import tqdm
 
 
 class Detector():
