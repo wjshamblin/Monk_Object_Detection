@@ -2,21 +2,21 @@
 
 Thanks to Monk_Object_Detection for providing the pytorch implementation! Tessellate Imaging - https://www.tessellateimaging.com/
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZmbeTro4SqT7h_TfW63MLdqbrCUk_1br#scrollTo=KwDS9qqBbMQa)
+## What You Will Learn
 
-## This Tutorial Includes
-
-* Loading in Image Detection data from Roboflow
-* Instantiating a Pytorch EfficientDet model
-* Training the EfficientDet model
-* Using the model for quick inference
-* Exporting the model weights for future inference
-* Reloading the model weights
+* How to load image detection data from Roboflow
+* How to instatiate a pytorch EfficientDet model
+* How to train the EfficientDet model
+* How to use the model for quick inference
+* How to export the model weights for future inference
+* How to reload the model weights
 
 ## Resources
 
 * This blog post provides an in depth dive into using the tutorial
-* This notebook provides the code necessary to run the tutorial [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZmbeTro4SqT7h_TfW63MLdqbrCUk_1br#scrollTo=KwDS9qqBbMQa)
+* This notebook provides the code necessary to run the tutorial  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZmbeTro4SqT7h_TfW63MLdqbrCUk_1br#scrollTo=KwDS9qqBbMQa)
+* For reading purposes, the notebook is also saved in Tutorial.ipynb
+
 
 ## About Roboflow for Data Management
 
