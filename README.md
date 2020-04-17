@@ -4,7 +4,7 @@ Thanks to Monk_Object_Detection for providing the pytorch implementation! Tessel
 
 ## What You Will Learn
 
-* How to load image detection data from Roboflow
+* How to load your custom image detection data from Roboflow
 * How to instatiate a pytorch EfficientDet model
 * How to train the EfficientDet model
 * How to use the model for quick inference
