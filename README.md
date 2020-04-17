@@ -23,7 +23,7 @@ Thanks to Monk_Object_Detection for providing the pytorch implementation! Tessel
 [Roboflow](https://roboflow.ai) makes managing, preprocessing, augmenting, and versioning datasets for computer vision seamless.
 Developers reduce 50% of their code when using Roboflow's workflow, automate annotation quality assurance, save training time, and increase model reproducibility.
 
-[![Roboflow Workmark](https://i.imgur.com/WHFqYSJ.png =350x)](https://roboflow.ai)
+![Roboflow Workmark](https://i.imgur.com/WHFqYSJ.png =350x)]
 
 
 ## Copyright
