@@ -54,10 +54,12 @@ class Infer():
         new_image[0:resized_height, 0:resized_width] = image
 
         img = torch.from_numpy(new_image)
-
+        
+        t0 = time.time()
         with torch.no_grad():
             scores, labels, boxes = self.system_dict["local"]["model"](img.cuda().permute(2, 0, 1).float().unsqueeze(dim=0))
             boxes /= scale;
+        print('Done. (%.3fs)' % (time.time() - t0))
 
 
         try:
