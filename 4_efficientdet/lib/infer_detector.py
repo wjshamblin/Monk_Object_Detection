@@ -12,7 +12,7 @@ import numpy as np
 from tqdm.autonotebook import tqdm
 from src.config import colors
 import cv2
-
+import time as time
 
 class Infer():
     def __init__(self, verbose=1):
