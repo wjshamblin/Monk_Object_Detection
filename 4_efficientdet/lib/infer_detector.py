@@ -59,6 +59,7 @@ class Infer():
         with torch.no_grad():
             scores, labels, boxes = self.system_dict["local"]["model"](img.cuda().permute(2, 0, 1).float().unsqueeze(dim=0))
             boxes /= scale;
+        duration = time.time() - t0
         print('Done. (%.3fs)' % (time.time() - t0))
 
 
@@ -84,7 +85,7 @@ class Infer():
 
             cv2.imwrite(os.path.join(output_folder, image_filename), output_image)
             cv2.imwrite("output.jpg", output_image)
-            return scores, labels, boxes
+            return duration, scores, labels, boxes
         
         except:
             print("NO Object Detected")
