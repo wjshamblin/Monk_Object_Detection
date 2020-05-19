@@ -2,6 +2,8 @@
 
 Thanks to Monk_Object_Detection for providing the pytorch implementation! Tessellate Imaging - https://www.tessellateimaging.com/
 
+Running on local? Check out ```./3_mxrcnn/installation``` for installation requirements that are different than the Colab tutorial.
+
 ## What You Will Learn
 
 * How to load your custom image detection data from Roboflow
